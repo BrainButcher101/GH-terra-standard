@@ -24,13 +24,13 @@ variable "description" {
 }
 
 variable "visibility" {
-    type = boolean
+    type = bool
     description = "Will this repository be public?"
     default = true
 }
 
 variable "is_template" {
-    type = boolean
+    type = bool
     description = "Will this repository become a template?"
     default = false
 }
