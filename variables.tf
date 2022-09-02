@@ -1,7 +1,6 @@
-variable "token" {
+variable "ghtoken" {
   type = string
   description = "Personal access token for GitHub"
-  default = ""
   sensitive = true
 }
 
