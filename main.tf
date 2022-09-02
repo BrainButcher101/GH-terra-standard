@@ -1,5 +1,5 @@
 provider "github" {
-  token = "GITHUB_TOKEN"
+  token = var.token
 }
 
 resource "github_repository" "repo" {
