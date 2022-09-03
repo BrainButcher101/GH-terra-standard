@@ -52,7 +52,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_Git_Clone_URL"></a> [Git\_Clone\_URL](#output\_Git\_Clone\_URL) | n/a |
-| <a name="output_Repo_ID"></a> [Repo\_ID](#output\_Repo\_ID) | n/a |
-| <a name="output_URL"></a> [URL](#output\_URL) | n/a |
+| <a name="output_Git_Clone_URL"></a> [Git\_Clone\_URL](#output\_Git\_Clone\_URL) | You can clone the repo via this URL |
+| <a name="output_Repo_ID"></a> [Repo\_ID](#output\_Repo\_ID) | This your repo ID |
+| <a name="output_URL"></a> [URL](#output\_URL) | You can reach the repository via this URL |
 <!-- END_TF_DOCS -->
