@@ -1,0 +1,98 @@
+{
+    "type": "object",
+    "properties": {
+      "name_prefix": {
+        "type": "string",
+        "title": "Name prefix used across this module",
+        "default": "StackGuardian"
+      },
+      "name": {
+        "type": "string",
+        "title": "Name for this Repository",
+        "default": "awesome repo"
+      },
+      "visibility": {
+        "title": "Is this repository public?",
+        "type": "boolean",
+        "default": true,
+        "enum": [
+          true,
+          false
+        ]
+      },
+      "desc": {
+        "type": "string",
+        "title": "Description for this Repository",
+        "default": "This is an awesome repo"
+      },
+      "advance_config": {
+        "enum": [
+          "Yes",
+          "No"
+        ]
+      }
+    },
+    "allOf": [
+      {
+        "if": {
+          "properties": {
+            "advance_config": {
+              "const": "Yes"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "has_issues": {
+              "type": "boolean",
+              "default":false
+            },
+            "allow_merge_commit":{
+              "type":"boolean",
+              "default":true
+            },
+            "is_template":{
+              "type":"boolean",
+              "default":false
+            },
+            "has_projects":{
+              "type":"boolean",
+              "default":false
+            },
+            "has_wiki":{
+              "type":"boolean",
+              "default":false
+            },
+            "allow_squash_merge":{
+              "type":"boolean",
+              "default":false
+            },
+            "allow_rebase_merge":{
+              "type":"boolean",
+              "default":false
+            },
+            "allow_auto_merge":{
+              "type":"boolean",
+              "default":false
+            },
+            "delete_branch_on_merge":{
+              "type":"boolean",
+              "default":false
+            },
+            "auto_init":{
+              "type":"boolean",
+              "default":false
+            },
+            "gitignore_template":{
+              "type":"string",
+              "default":"Terraform"
+            },
+            "license_template":{
+              "type":"string",
+              "default":"apache-2.0"
+            }
+          }
+        }
+      }
+    ]
+  }
