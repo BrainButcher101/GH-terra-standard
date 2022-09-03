@@ -43,6 +43,7 @@ variable "has_issues" {
 variable "has_projects" {
     type = bool
     description = " (Optional) Set to true to enable the GitHub Projects features on the repository."
+    default = false
 }
 
 variable "has_wiki" {
@@ -54,7 +55,7 @@ variable "has_wiki" {
 variable "allow_merge_commit" {
     type = bool
     description = "(Optional) Set to false to disable merge commits on the repository."
-    default = false
+    default = true
 }
 
 variable "allow_squash_merge" {
@@ -100,7 +101,7 @@ variable "license_template" {
 }
 
 variable "topics" {
-    type = string
+    type = list(string)
     description = "(optional) List of topics"
     default = [ "Terraform" , "Module" ]
 }
