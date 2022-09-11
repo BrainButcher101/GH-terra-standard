@@ -25,11 +25,21 @@
         "title": "Description for this Repository",
         "default": "This is an awesome repo"
       },
+      "file_names":{
+        "type":"array",
+        "title":"Files in the Repo",
+        "description":"Please specifiy the files you want to add",
+        "items":{
+            "type":"string"
+        },
+        "default":["main.tf", "variables.tf", "output.tf"]
+      },
       "advance_config": {
         "enum": [
           "Yes",
           "No"
-        ]
+        ],
+        "default":"No"
       }
     },
     "allOf": [

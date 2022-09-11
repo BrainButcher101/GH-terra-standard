@@ -1,5 +1,5 @@
 resource "github_repository_file" "main" {
-    for_each = var.file_names
+    for_each = toset(file_names)
     file = each.value
     repository = github_repository.repo.name
     branch = github_branch.add_branch.branch

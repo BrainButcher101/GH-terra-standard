@@ -119,7 +119,7 @@ variable "branch_name" {
 }
 
 variable "file_names" {
-    type = set(string)
+    type = list(string)
     description = "Filenames to create"
     default = ["main.tf" , "variables.tf" , "output.tf" , "data.tf"]
   
